@@ -3,49 +3,34 @@
 #include <time.h>
 
 void copyArray(int tab[9][9], int copy[9][9] ){
-    // Cette fonction prend deux tableaux d'entiers à deux dimensions, tab et copy, en paramètres.
-    // tab est le tableau que nous voulons copier dans le tableau copy.
-
     for(int i = 0; i < 9; i++){
-        // Cette boucle for parcourt les lignes du tableau, de 0 à 8.
-
         for(int j = 0; j < 9; j++){
-            // Cette boucle for parcourt les colonnes du tableau, de 0 à 8.
-
             copy[i][j] = tab[i][j];
-            // Cette ligne de code copie la valeur de la case (i,j) de tab dans la case correspondante de copy.
         }
     }
-    // Après l'exécution de ces deux boucles for, le tableau copy est une copie exacte du tableau tab.
 }
 
 void afficher(int tab[9][9]){
-    // Cette fonction prend un tableau d'entiers à deux dimensions, tab, en paramètre.
-    // Elle a pour but d'afficher le tableau dans la console.
-
-    // Affichage de la première ligne de la grille, indiquant les coordonnées en X
     printf("| Y\\X  ");
     for(int i = 0; i < 9; i++){
         printf("| %d ", i);
     }
     printf("|\n");
 
-    // Affichage de la ligne séparatrice horizontale
     for(int i = 0; i < 10; i++){
         printf("----");
     }
 
-    // Affichage du contenu de la grille
     for(int i = 0; i < 9; i++){
         printf("\n");
-        printf("| %d >  ", i); // Affichage des coordonnées en Y
+        printf("| %d >  ", i); 
         for(int j = 0; j < 9; j++){
-            printf("| %d ", tab[i][j]); // Affichage de la valeur de chaque case du tableau
+            printf("| %d ", tab[i][j]);
         }
         printf("|\n");
     }
 
-    printf("\n"); // Saut de ligne en fin d'affichage
+    printf("\n");
 }
 
 int verifierLigneColonne(int tab[9][9], int ligne, int ligneOrCol ){
