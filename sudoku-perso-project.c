@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define GRID_SIZE 9 // Grid size (9*9)
 #define LIST_SIZE 9 // List size (1-9)
+
 int list[LIST_SIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
 void shuffleList(){ // List shuffle function
     int i, j, temp;
     for (i = 0; i < LIST_SIZE - 1; i++) { // Browse list
@@ -13,6 +16,7 @@ void shuffleList(){ // List shuffle function
         list[j] = temp; // Swap
     }
 }
+
 int main(){ // Main function
     srand(time(NULL)); // Random seed
     shuffleList(); // Shuffle list
@@ -50,7 +54,9 @@ int main(){ // Main function
         printf("| \n");
     }
     printf("+-------+-------+-------+\n");
+    
     // TODO: Ask the user to fill the empty cells, if the cell is already filled, tell him and display the grid, if the cell is empty and the user
+    
     int row, col, num;
     int count = 0;
     while (count < 1) {
