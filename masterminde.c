@@ -82,7 +82,7 @@ void verifier(char lettre[4], char lettre2[4]){
     printf("\nNombre de case mal place : %d", mal_place);
 }
 
-// Focntion principale
+// Fonction principale
 int main(){
 
     char lettre2[4];
