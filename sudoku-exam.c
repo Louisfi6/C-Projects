@@ -85,7 +85,7 @@ void generate(int tab[9][9], int copyTableau[9][9]){ // Function to generate a s
     for(int i = 0; i < 9; i++){
         for(int j = 0; j < 9; j++){
             if(!(rand() % 2)){
-                copyTableau[i][j] = tab[i][j]; // If the number is less than 97, we copy the number in the copy array
+                copyTableau[i][j] = tab[i][j]; // We copy 1/2 tab in copyTableau
             }
         }
     }
